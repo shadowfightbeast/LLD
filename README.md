@@ -1,15 +1,27 @@
 # LLD 
-#All Design Pattern in C++ And Java Language
+#All Design Patterns in C++ And Java Language
 
 #These are the best Design Patterns
-#Strategy Pattern
-#Observer Pattern
-#Factory Pattern
-#Abstract Factory Pattern
-#Singleton Pattern
-#Command Pattern
-#Proxy Pattern
-#Bridge Pattern
-#Template method Pattern
-#Composite Pattern
-#Iterator Pattern
+
+1.Factory Pattern
+
+2.Abstract Factory Pattern
+
+3.Strategy Pattern
+
+4.Singleton Pattern
+
+5.Observer Pattern
+
+6.Iterator Pattern
+
+8.Proxy Pattern
+
+9.Command Pattern
+
+10.Bridge Pattern
+
+11.Template method Pattern
+
+12.Composite Pattern
+
