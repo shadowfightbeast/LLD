@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-class MilkShake
-{
+class MilkShake {
 public:
     virtual string Serve() = 0;
     virtual float price() = 0;
@@ -9,8 +8,7 @@ public:
 class BaseMilkShake : public MilkShake
 {
 public:
-    string Serve()
-    {
+    string Serve() {
         return "MilkShake";
     }
     float price()
@@ -21,10 +19,10 @@ public:
 class MilkShakeDecorator : public MilkShake
 {
 protected:
-    MilkShake *m_Milkshake;
+    MilkShake* m_Milkshake;
 
 public:
-    MilkShakeDecorator(MilkShake *BaseMilkShake) : m_Milkshake(BaseMilkShake) {}
+    MilkShakeDecorator(MilkShake* BaseMilkShake) : m_Milkshake(BaseMilkShake) {}
     string Serve()
     {
         return m_Milkshake->Serve();
@@ -37,7 +35,7 @@ public:
 class MangoMilkShake : public MilkShakeDecorator
 {
 public:
-    MangoMilkShake(MilkShake *baseMilkShake) : MilkShakeDecorator(baseMilkShake) {}
+    MangoMilkShake(MilkShake* baseMilkShake) : MilkShakeDecorator(baseMilkShake) {}
 
     string Serve()
     {
@@ -51,7 +49,7 @@ public:
 class VanillaMilkShake : public MilkShakeDecorator
 {
 public:
-    VanillaMilkShake(MilkShake *baseMilkshake) : MilkShakeDecorator(baseMilkshake) {}
+    VanillaMilkShake(MilkShake* baseMilkshake) : MilkShakeDecorator(baseMilkshake) {}
     string Serve()
     {
         return m_Milkshake->Serve() + " decorated with Vanilla  ";
@@ -63,18 +61,18 @@ public:
 };
 int main()
 {
-    MilkShake *baseMilkShake = new BaseMilkShake();
+    MilkShake* baseMilkShake = new BaseMilkShake();
     cout << "base milkshake" << endl;
     cout << baseMilkShake->Serve() << endl;
     cout << baseMilkShake->price() << endl;
 
-    MilkShake *decorateMilkShake = new MangoMilkShake(baseMilkShake);
+    MilkShake* decorateMilkShake = new MangoMilkShake(baseMilkShake);
     cout << decorateMilkShake->Serve() << endl;
     cout << decorateMilkShake->price() << endl;
 
     delete decorateMilkShake;
 
-    
+
     decorateMilkShake = new VanillaMilkShake(baseMilkShake);
     cout << decorateMilkShake->Serve() << endl;
     cout << decorateMilkShake->price() << endl;

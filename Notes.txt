@@ -1,0 +1,13 @@
+Strategy Pattern
+Observer Patter96n
+Factory Pattern
+Abstract Factory Pattern
+Singleton Pattern
+Command Pattern
+Proxy Pattern
+Bridge Pattern
+Template method Pattern
+Composite Pattern
+Iterator Pattern
+
+

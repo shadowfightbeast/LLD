@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 // pattern are also known as virtual contsructor
-//  subclasses are responsible to create the instances ofthe class
+//  subclasses are responsible to create the instances of the class
 class Vechile
 {
 public:

@@ -2,7 +2,7 @@
 using namespace std;
 class Desktop
 {
-    string mointer;
+    string monitor;
     string mouse;
     string keyboard;
     string ram;
@@ -11,9 +11,9 @@ class Desktop
     string motherboard;
 
 public:
-    void setMoniter(string Pmoniter)
+    void set_monitor(string P_monitor)
     {
-        mointer = Pmoniter;
+        monitor = P_monitor;
     }
     void setMouse(string pMouse)
     {
@@ -39,9 +39,9 @@ public:
     {
         speaker = pSpeaker;
     }
-    void showspecs()
+    void show_specs()
     {
-        cout << mointer << endl;
+        cout << monitor << endl;
         cout << keyboard << endl;
         cout << mouse << endl;
         cout << speaker << endl;
@@ -53,30 +53,30 @@ public:
 class DesktopBuilder
 {
 protected:
-    Desktop *desktop;
+    Desktop* desktop;
 
 public:
     DesktopBuilder()
     {
         desktop = new Desktop();
     }
-    virtual void buildMoniter() = 0;
+    virtual void build_monitor() = 0;
     virtual void buildMouse() = 0;
     virtual void buildKeyboard() = 0;
     virtual void buildSpeaker() = 0;
     virtual void buildRam() = 0;
     virtual void buildProcessor() = 0;
     virtual void buildMotherboard() = 0;
-    virtual Desktop *getDesktop()
+    virtual Desktop* getDesktop()
     {
         return desktop;
     }
 };
-class DellDesktopbuilder : public DesktopBuilder
+class Dell_desktop_builder : public DesktopBuilder
 {
-    void buildMoniter()
+    void build_monitor()
     {
-        desktop->setMoniter("Dell Monitor");
+        desktop->set_monitor("Dell Monitor");
     }
     void buildKeyboard()
     {
@@ -103,11 +103,11 @@ class DellDesktopbuilder : public DesktopBuilder
         desktop->setProcessor("Dell Processor");
     }
 };
-class HPDesktopbuilder : public DesktopBuilder
+class HP_desktop_builder : public DesktopBuilder
 {
-    void buildMoniter()
+    void build_monitor()
     {
-        desktop->setMoniter("HP Monitor");
+        desktop->set_monitor("HP Monitor");
     }
     void buildKeyboard()
     {
@@ -137,16 +137,16 @@ class HPDesktopbuilder : public DesktopBuilder
 class DesktopDirector
 {
 private:
-    DesktopBuilder *desktopBuilder;
+    DesktopBuilder* desktopBuilder;
 
 public:
-    DesktopDirector(DesktopBuilder *pDesktopBuilder)
+    DesktopDirector(DesktopBuilder* pDesktopBuilder)
     {
         desktopBuilder = pDesktopBuilder;
     }
-    Desktop *BuildDesktop()
+    Desktop* BuildDesktop()
     {
-        desktopBuilder->buildMoniter();
+        desktopBuilder->build_monitor();
         desktopBuilder->buildKeyboard();
         desktopBuilder->buildMotherboard();
         desktopBuilder->buildProcessor();
@@ -158,13 +158,13 @@ public:
 };
 int main()
 {
-    DellDesktopbuilder *DellDesktop = new DellDesktopbuilder();
-    HPDesktopbuilder *HPDesktop = new HPDesktopbuilder();
-    DesktopDirector *director1 = new DesktopDirector(DellDesktop);
-    DesktopDirector *director2 = new DesktopDirector(HPDesktop);
-    Desktop *desktop1 = director1->BuildDesktop();
-    Desktop *desktop2 = director2->BuildDesktop();
-    desktop1->showspecs();
-    desktop2->showspecs();
+    Dell_desktop_builder* DellDesktop = new Dell_desktop_builder();
+    HP_desktop_builder* HPDesktop = new HP_desktop_builder();
+    DesktopDirector* director1 = new DesktopDirector(DellDesktop);
+    DesktopDirector* director2 = new DesktopDirector(HPDesktop);
+    Desktop* desktop1 = director1->BuildDesktop();
+    Desktop* desktop2 = director2->BuildDesktop();
+    desktop1->show_specs();
+    desktop2->show_specs();
     return 0;
 }
