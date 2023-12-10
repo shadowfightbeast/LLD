@@ -1,102 +1,81 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Car
-{
+class Car {
 public:
     virtual void car() = 0;
 };
-class ToyotaCar : public Car
-{
+class ToyotaCar : public Car {
 public:
-    void car()
-    {
+    void car() {
         cout << "Toyota car" << endl;
     }
 };
-class HyundaiCar : public Car
-{
+class HyundaiCar : public Car {
 public:
-    void car()
-    {
+    void car() {
         cout << "HYundai car" << endl;
     }
 };
-class Bike
-{
+class Bike {
 public:
     virtual void bike() = 0;
 };
-class HyundaiBike : public Bike
-{
+class HyundaiBike : public Bike {
 public:
-    void bike()
-    {
+    void bike() {
         cout << "Hyundai Bike" << endl;
     }
 };
-class ToyotaBike : public Bike
-{
+class ToyotaBike : public Bike {
 public:
-    void bike()
-    {
+    void bike() {
         cout << "Toyota Bike" << endl;
     }
 };
-class VechileFactory
-{
+class VehicleFactory {
 public:
-    virtual Car *CreateCar() = 0;
-    virtual Bike *CreateBike() = 0;
+    virtual Car* CreateCar() = 0;
+    virtual Bike* CreateBike() = 0;
 };
-class HyudaiFactory : public VechileFactory
-{
+
+class HyundaiFactory : public VehicleFactory {
 public:
-    Car *CreateCar()
-    {
+    Car* CreateCar() {
         return new HyundaiCar();
     }
-    Bike *CreateBike()
-    {
+    Bike* CreateBike() {
         return new HyundaiBike();
     }
 };
-class ToyotaFactory : public VechileFactory
-{
+
+class ToyotaFactory : public VehicleFactory {
 public:
-    Car *CreateCar()
-    {
+    Car* CreateCar() {
         return new ToyotaCar();
     }
-    Bike *CreateBike()
-    {
+    Bike* CreateBike() {
         return new ToyotaBike();
     }
 };
-class MAINAbstractFactory
-{
+
+class MAINAbstractFactory {
 public:
-    static VechileFactory *createFactory(string company)
-    {
+    static VehicleFactory* createFactory(string company) {
         if (company == "hyundai")
-        {
-            return new HyudaiFactory();
-        }
+            return new HyundaiFactory();
         if (company == "toyota")
-        {
             return new ToyotaFactory();
-        }
         return new ToyotaFactory();
     }
 };
 
-int main()
-{
+int main() {
     string name = "hyundai";
-    VechileFactory *fact = MAINAbstractFactory::createFactory(name);
-    Bike *bike = fact->CreateBike();
+    VehicleFactory* fact = MAINAbstractFactory::createFactory(name);
+    Bike* bike = fact->CreateBike();
     bike->bike();
 
-    Car *car = fact->CreateCar();
+    Car* car = fact->CreateCar();
     car->car();
 
     return 0;

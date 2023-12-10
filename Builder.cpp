@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Desktop
-{
+class Desktop {
     string monitor;
     string mouse;
     string keyboard;
@@ -11,36 +10,28 @@ class Desktop
     string motherboard;
 
 public:
-    void set_monitor(string P_monitor)
-    {
+    void set_monitor(string P_monitor) {
         monitor = P_monitor;
     }
-    void setMouse(string pMouse)
-    {
+    void setMouse(string pMouse) {
         mouse = pMouse;
     }
-    void setKeyboard(string pKeyboard)
-    {
+    void setKeyboard(string pKeyboard) {
         keyboard = pKeyboard;
     }
-    void setRam(string pRam)
-    {
+    void setRam(string pRam) {
         ram = pRam;
     }
-    void setProcessor(string pProcessor)
-    {
+    void setProcessor(string pProcessor) {
         processor = pProcessor;
     }
-    void setMotherBoard(string pMotherboard)
-    {
+    void setMotherBoard(string pMotherboard) {
         motherboard = pMotherboard;
     }
-    void setSpeaker(string pSpeaker)
-    {
+    void setSpeaker(string pSpeaker) {
         speaker = pSpeaker;
     }
-    void show_specs()
-    {
+    void show_specs() {
         cout << monitor << endl;
         cout << keyboard << endl;
         cout << mouse << endl;
@@ -50,14 +41,13 @@ public:
         cout << processor << endl;
     }
 };
-class DesktopBuilder
-{
+
+class DesktopBuilder {
 protected:
     Desktop* desktop;
 
 public:
-    DesktopBuilder()
-    {
+    DesktopBuilder() {
         desktop = new Desktop();
     }
     virtual void build_monitor() = 0;
@@ -67,85 +57,67 @@ public:
     virtual void buildRam() = 0;
     virtual void buildProcessor() = 0;
     virtual void buildMotherboard() = 0;
-    virtual Desktop* getDesktop()
-    {
+    virtual Desktop* getDesktop() {
         return desktop;
     }
 };
-class Dell_desktop_builder : public DesktopBuilder
-{
-    void build_monitor()
-    {
+
+class Dell_desktop_builder : public DesktopBuilder {
+    void build_monitor() {
         desktop->set_monitor("Dell Monitor");
     }
-    void buildKeyboard()
-    {
+    void buildKeyboard() {
         desktop->setKeyboard("Dell Keyboard");
     }
-    void buildMouse()
-    {
+    void buildMouse() {
         desktop->setMouse("Dell Mouse");
     }
-    void buildSpeaker()
-    {
+    void buildSpeaker() {
         desktop->setSpeaker("Dell Speaker");
     }
-    void buildRam()
-    {
+    void buildRam() {
         desktop->setRam("Dell Ram");
     }
-    void buildMotherboard()
-    {
+    void buildMotherboard() {
         desktop->setMotherBoard("Dell MotherBoard");
     }
-    void buildProcessor()
-    {
+    void buildProcessor() {
         desktop->setProcessor("Dell Processor");
     }
 };
-class HP_desktop_builder : public DesktopBuilder
-{
-    void build_monitor()
-    {
+
+class HP_desktop_builder : public DesktopBuilder {
+    void build_monitor() {
         desktop->set_monitor("HP Monitor");
     }
-    void buildKeyboard()
-    {
+    void buildKeyboard() {
         desktop->setKeyboard("HP Keyboard");
     }
-    void buildMouse()
-    {
+    void buildMouse() {
         desktop->setMouse("HP Mouse");
     }
-    void buildSpeaker()
-    {
+    void buildSpeaker() {
         desktop->setSpeaker("HP Speaker");
     }
-    void buildRam()
-    {
+    void buildRam() {
         desktop->setRam("HP Ram");
     }
-    void buildMotherboard()
-    {
+    void buildMotherboard() {
         desktop->setMotherBoard("HP MotherBoard");
     }
-    void buildProcessor()
-    {
+    void buildProcessor() {
         desktop->setProcessor("HP Processor");
     }
 };
-class DesktopDirector
-{
+class DesktopDirector {
 private:
     DesktopBuilder* desktopBuilder;
 
 public:
-    DesktopDirector(DesktopBuilder* pDesktopBuilder)
-    {
+    DesktopDirector(DesktopBuilder* pDesktopBuilder) {
         desktopBuilder = pDesktopBuilder;
     }
-    Desktop* BuildDesktop()
-    {
+    Desktop* BuildDesktop() {
         desktopBuilder->build_monitor();
         desktopBuilder->buildKeyboard();
         desktopBuilder->buildMotherboard();
@@ -156,8 +128,7 @@ public:
         return desktopBuilder->getDesktop();
     }
 };
-int main()
-{
+int main() {
     Dell_desktop_builder* DellDesktop = new Dell_desktop_builder();
     HP_desktop_builder* HPDesktop = new HP_desktop_builder();
     DesktopDirector* director1 = new DesktopDirector(DellDesktop);

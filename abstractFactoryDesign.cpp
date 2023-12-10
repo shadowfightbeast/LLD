@@ -1,92 +1,74 @@
 #include <bits/stdc++.h>
 using namespace std;
 // factory design pattern  was creating concrete classes or  object
-// abstract factory  design  pattern is going to  create factories that is going to create object
-class Ibutton
-{
+// Abstract factory  design  pattern is going to  create factories that is going to create object
+
+class I_button {
 public:
     virtual void press() = 0;
 };
-class Macbutton : public Ibutton
-{
+
+class Mac_button : public I_button {
 public:
-    void press()
-    {
+    void press() {
         cout << "mac button pressed" << endl;
     }
 };
-class WinButton : public Ibutton
-{
+class WinButton : public I_button {
 public:
-    void press()
-    {
+    void press() {
         cout << "Window button pressed" << endl;
     }
 };
-class ITextBox
-{
+class ITextBox {
 public:
-    virtual void showtext() = 0;
+    virtual void show_text() = 0;
 };
-class MacTextBox : public ITextBox
-{
+class MacTextBox : public ITextBox {
 public:
-    void showtext()
-    {
-        cout << " showing mac showtext box" << endl;
+    void show_text() {
+        cout << " showing mac show_text box" << endl;
     }
 };
-class WinTextBox : public ITextBox
-{
+class WinTextBox : public ITextBox {
 public:
-    void showtext()
-    {
-        cout << "showing window showtext box" << endl;
+    void show_text() {
+        cout << "showing window show_text box" << endl;
     }
 };
-class Ifactory
-{
+
+class I_factory {
 public:
-    virtual Ibutton *CreateButton() = 0;
-    virtual ITextBox *CreateTextBox() = 0;
+    virtual I_button* CreateButton() = 0;
+    virtual ITextBox* CreateTextBox() = 0;
 };
-class MacFactory : public Ifactory
-{
+
+class MacFactory : public I_factory {
 public:
-    Ibutton *CreateButton()
-    {
-        return new Macbutton();
+    I_button* CreateButton() {
+        return new Mac_button();
     }
-    ITextBox *CreateTextBox()
-    {
+    ITextBox* CreateTextBox() {
         return new MacTextBox();
     }
 };
-class WinFactory : public Ifactory
-{
+
+class WinFactory : public I_factory {
 public:
-    Ibutton *CreateButton()
-    {
+    I_button* CreateButton() {
         return new WinButton();
     }
-    ITextBox *CreateTextBox()
-    {
+    ITextBox* CreateTextBox() {
         return new WinTextBox();
     }
 };
-class GUIAbstractFactory
-{
+class GUIAbstractFactory {
 public:
-    static Ifactory *CreateFactory(string osType)
-    {
+    static I_factory* CreateFactory(string osType) {
         if (osType == "windows")
-        {
             return new WinFactory();
-        }
         else if (osType == "mac")
-        {
             return new MacFactory();
-        }
         return new MacFactory();
     }
 };
@@ -95,12 +77,12 @@ int main()
     cout << "enter your machine os" << endl;
     string osType;
     cin >> osType;
-    Ifactory *fact = GUIAbstractFactory::CreateFactory(osType);
-    Ibutton *button = fact->CreateButton();
+    I_factory* fact = GUIAbstractFactory::CreateFactory(osType);
+    I_button* button = fact->CreateButton();
     button->press();
 
-    ITextBox *textbox = fact->CreateTextBox();
-    textbox->showtext();
+    ITextBox* text_box = fact->CreateTextBox();
+    text_box->show_text();
 
     return 0;
 }

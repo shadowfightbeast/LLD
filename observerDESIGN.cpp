@@ -17,8 +17,7 @@ public:
         cout << "user" << userId << " " << msg << endl;
     }
 };
-class Group
-{
+class Group {
 private:
     list<IsSubscriber*> users;
 
@@ -30,12 +29,12 @@ public:
         users.remove(user);
     }
     void notify(string msg) {
-        for (auto it : users)
-        {
+        for (auto it : users) {
             it->notify(msg);
         }
     }
 };
+
 int main() {
     Group* group = new Group;
     user* user1 = new user(1);

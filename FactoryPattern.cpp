@@ -1,58 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
-// pattern are also known as virtual contsructor
-//  subclasses are responsible to create the instances of the class
-class Vechile
-{
+// Pattern are also known as virtual constructor
+// Subclasses are responsible to create the instances of the class
+class Vehicle {
 public:
-    virtual void createVechile() = 0;
+    virtual void createVehicle() = 0;
 };
-class Bike : public Vechile
-{
+
+class Bike : public Vehicle {
 public:
-    void createVechile()
-    {
+    void createVehicle() {
         cout << "CREATING A BIKE" << endl;
     }
 };
-class Car : public Vechile
-{
+class Car : public Vehicle {
 public:
-    void createVechile()
-    {
+    void createVehicle() {
         cout << "CREATING A Car" << endl;
     }
 };
-class VechileFactory : public Vechile
-{
+class VehicleFactory : public Vehicle {
 public:
-    static Vechile *getVechile(string VechileType)
-    {
-        Vechile *vobj;
-        if (VechileType == "Bike")
+    static Vehicle* getVehicle(string VehicleType) {
+        Vehicle* vobj;
+        if (VehicleType == "Bike")
             vobj = new Bike();
-        else if (VechileType == "Car")
-        {
+        else if (VehicleType == "Car")
             vobj = new Car();
-        }
         return vobj;
     }
 };
 
-int main()
-{
-    // string VechileType;
-    // cin >> VechileType;
-    // Vechile *vobj;
-    // if (VechileType == "Bike")
+int main() {
+    // string VehicleType;
+    // cin >> VehicleType;
+    // Vehicle *vobj;
+    // if (VehicleType == "Bike")
     //     vobj = new Bike();
-    // else if (VechileType == "Car")
+    // else if (VehicleType == "Car")
     //     vobj = new Car();
-    // vobj->createVechile();
+    // vobj->createVehicle();
     //----------------------------------------
-    string VechileType;
-    cin >> VechileType;
-    Vechile *vobj = VechileFactory::getVechile(VechileType);
-    vobj->createVechile();
+    string VehicleType;
+    cin >> VehicleType;
+    Vehicle* vobj = VehicleFactory::getVehicle(VehicleType);
+    vobj->createVehicle();
     return 0;
 }
