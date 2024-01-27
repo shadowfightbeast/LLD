@@ -53,3 +53,49 @@ SOME BASIC PROBLEMS TO SOLVE:
 12. DESIGN STACK OVERFLOW
 
 13. DESIGN UBER/OLA
+
+#There are five types of Creational Patterns :
+
+1.Factory method/Template
+
+2.Abstract Factory Pattern
+
+3.Builder Pattern
+
+4.Prototype Pattern
+
+5.Singleton Pattern
+
+#The types of Structural patterns are:
+
+1.Adapter Pattern
+
+2.Bridge Pattern
+
+3.Filter Pattern
+
+4.Composite Pattern
+
+5.Decorator Pattern
+
+6.Facade Pattern
+
+7.Flyweight Pattern
+
+8.Proxy Pattern
+
+#The types of Behavioral Patterns are:
+
+1.Interpreter Pattern
+
+2.Template method/ Pattern
+
+3.Chain of responsibility
+
+4.Command Pattern
+
+5.Iterator Pattern
+
+6.Strategy Pattern
+
+7.Visitor Pattern

@@ -1,17 +1,25 @@
-public class Triangle implements  Shape{
-    double a,b,c;
-    public Triangle(double a,double b,double c){
-        this.a=a;
-        this.b=b;
-        this.c=c;
+public class Triangle implements Shape {
+    double a, b, c;
+
+    public Triangle(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
+
     @Override
     public double calcArea() {
-        return 0.5*b*c;
+        return 0.5 * b * c;
     }
 
     @Override
     public double calcParameter() {
-        return  a+b+c;
+        return a + b + c;
+    }
+
+    @Override
+    public void draw() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'draw'");
     }
 }
