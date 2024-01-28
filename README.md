@@ -56,7 +56,7 @@ SOME BASIC PROBLEMS TO SOLVE:
 
 #There are five types of Creational Patterns :
 
-1. Factory method/Template
+1. Factory method
 
 2. Abstract Factory Pattern
 
