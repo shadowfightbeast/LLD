@@ -16,6 +16,7 @@ public class App {
         headSales.add(salesExecutive2);
         headMarketing.add(clerk1);
         headMarketing.add(clerk2);
+
         System.out.println(CEO);
 
         for (Employee headEmployee : CEO.getSubordinates()) {
