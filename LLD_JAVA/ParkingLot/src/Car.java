@@ -1,4 +1,5 @@
 package LLD_JAVA.ParkingLot.src;
+
 public class Car {
 
     private String licensePlate;
