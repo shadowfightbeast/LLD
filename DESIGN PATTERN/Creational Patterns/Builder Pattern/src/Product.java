@@ -2,16 +2,19 @@ import java.util.LinkedList;
 
 public class Product {
 
-    private LinkedList<String>parts;
-    public  Product(){
-        parts=new LinkedList<String>();
+    private LinkedList<String> parts;
+
+    public Product() {
+        parts = new LinkedList<String>();
     }
-    public  void add(String part){
+
+    public void add(String part) {
         parts.addLast(part);
     }
-    public   void show(){
-        System.out.println("prodcuts as below");
-        for(int i=0;i<parts.size();i++){
+
+    public void show() {
+        System.out.println("products as below");
+        for (int i = 0; i < parts.size(); i++) {
             System.out.println(parts.get(i));
         }
     }

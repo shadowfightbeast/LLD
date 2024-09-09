@@ -1,17 +1,22 @@
 public interface Hollywood {
     void getMovie();
 }
-class HollywoodComedy implements  Hollywood{
+
+class HollywoodComedy implements Hollywood {
     @Override
     public void getMovie() {
-        System.out.println("Hollywood comdedy movie");
+        System.out.println("Hollywood comedy movie");
     }
-}class HollywoodAction implements  Hollywood{
+}
+
+class HollywoodAction implements Hollywood {
     @Override
     public void getMovie() {
         System.out.println("Hollywood action movie");
     }
-}class HollywoodHoror implements  Hollywood{
+}
+
+class HollywoodHorror implements Hollywood {
     @Override
     public void getMovie() {
         System.out.println("Hollywood Horror movie");

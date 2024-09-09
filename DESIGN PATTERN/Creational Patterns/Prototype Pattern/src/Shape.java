@@ -1,4 +1,5 @@
-public abstract class Shape implements Cloneable {
+public abstract class Shape implements Cloneable { // Cloneable interface is implemented by a class to make Object.
+                                                   // clone() method valid thereby making field-for-field copy
     private String id;
     protected String type;
 

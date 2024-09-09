@@ -1,15 +1,20 @@
-public abstract  class AbstractFactory {
+public abstract class AbstractFactory {
     abstract Hollywood getHName(String name);
+
     abstract Bollywood getBName(String name);
 }
 
-class HNameFactory extends AbstractFactory{
+class HNameFactory extends AbstractFactory {
     @Override
     Hollywood getHName(String name) {
-        if(name==null) return null;
-        else if(name=="Ted") return new HollywoodComedy();
-        else if(name=="Wanted") return new HollywoodAction();
-        else if(name=="Anaballe") return new HollywoodAction();
+        if (name == null)
+            return null;
+        else if (name == "Ted")
+            return new HollywoodComedy();
+        else if (name == "Wanted")
+            return new HollywoodAction();
+        else if (name == "Annabelle")
+            return new HollywoodAction();
         return null;
     }
 
@@ -19,7 +24,8 @@ class HNameFactory extends AbstractFactory{
         return null;
     }
 }
-class BNameFactory extends AbstractFactory{
+
+class BNameFactory extends AbstractFactory {
 
     @Override
     Hollywood getHName(String name) {
@@ -28,10 +34,14 @@ class BNameFactory extends AbstractFactory{
 
     @Override
     Bollywood getBName(String name) {
-        if(name==null) return  null;
-        else if(name=="dhamaal") return  new BollywoodComedy();
-        else if(name=="krish") return  new BollywoodAction();
-        else if(name=="raaz") return  new BollywoodHoror();
+        if (name == null)
+            return null;
+        else if (name == "Welcome")
+            return new BollywoodComedy();
+        else if (name == "Commando")
+            return new BollywoodAction();
+        else if (name == "Haunted")
+            return new BollywoodHorror();
         return null;
     }
 }

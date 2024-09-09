@@ -1,12 +1,17 @@
 public interface BuilderInterface {
     void buildBody();
+
     void insertWheels();
+
     void addHeadlights();
-    Product getVechile();
+
+    Product getVehicle();
 
 }
-class Car implements  BuilderInterface{
-    private  Product product =new Product();
+
+class Car implements BuilderInterface {
+    private Product product = new Product();
+
     @Override
     public void buildBody() {
         product.add("This is a  body of a car");
@@ -24,11 +29,14 @@ class Car implements  BuilderInterface{
     }
 
     @Override
-    public Product getVechile() {
-     return product;
+    public Product getVehicle() {
+        return product;
     }
-}class MotorCycle implements  BuilderInterface{
-    private  Product product =new Product();
+}
+
+class MotorCycle implements BuilderInterface {
+    private Product product = new Product();
+
     @Override
     public void buildBody() {
         product.add("This is a  body of a motorcycle");
@@ -46,7 +54,7 @@ class Car implements  BuilderInterface{
     }
 
     @Override
-    public Product getVechile() {
-     return product;
+    public Product getVehicle() {
+        return product;
     }
 }

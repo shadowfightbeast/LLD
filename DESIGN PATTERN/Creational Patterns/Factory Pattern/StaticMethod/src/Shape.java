@@ -1,11 +1,10 @@
 package LLD_JAVA.Factory.StaticMethod.src;
+
 public interface Shape {
     void draw();
 }
 
 class Rectangle implements Shape {
-    public Rectangle(int i, int j) {
-    }
 
     @Override
     public void draw() {
@@ -21,12 +20,6 @@ class Square implements Shape {
 }
 
 class Circle implements Shape {
-    public Circle(int i) {
-    }
-
-    public Circle() {
-    }
-
     @Override
     public void draw() {
         System.out.println("inside Circle draw method");

@@ -1,22 +1,29 @@
 public interface Product {
     void eat();
+
     void walk();
+
+    void add(String string);
 }
-class Duck implements Product{
+
+class Duck implements Product {
     @Override
-    public void eat(){
+    public void eat() {
         System.out.println("Duck eating");
     }
-    public void  walk(){
+
+    public void walk() {
         System.out.println("duck walking");
     }
+}
 
-}class Tiger implements Product{
+class Tiger implements Product {
     @Override
-    public void eat(){
+    public void eat() {
         System.out.println("tiger eating");
     }
-    public void  walk(){
+
+    public void walk() {
         System.out.println("Tiger walking");
     }
 

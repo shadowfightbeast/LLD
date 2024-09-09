@@ -1,4 +1,5 @@
 package LLD_JAVA.Factory.AbstractCreator.src;
+
 public abstract class AbstractShapeFactory {
     protected abstract Shape factoryMethod();
 
