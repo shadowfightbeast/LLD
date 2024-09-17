@@ -35,6 +35,22 @@ Challenge yourself with these classic low-level design problems:
 11. 🏏 **CricBuzz Design**
 12. 💻 **StackOverflow Design**
 13. 🚕 **Uber/Ola Design**
+14. 📦 **Warehouse Management System (WMS)
+15. 🛒 **E-Commerce System
+16. 🛒 **Quick-Commerce System (eg.Zepto,blink it)
+17. 🛵 **Food Delivery System (e.g., Zomato/Swiggy)
+18. 🧾 **Billing and Subscription System
+19. 🏦 **Banking System (Create a system for managing user accounts, transactions, loans, and ATMs.)
+20. 📦 **Package Delivery System (e.g., FedEx)
+21. 📈 **Stock Trading System
+22. 📱 **Messaging/Chat Application (e.g., WhatsApp)
+23. 🧾 **Billing and Subscription System (Create a system for managing recurring payments, billing cycles, subscriptions, and payment failures.)
+23. 💼 **Job Portal System (e.g., LinkedIn) (Build a system where users can post and apply for jobs, create profiles, and receive job recommendations.)
+24. 🖥 **Content Management System (CMS) (Build a system like WordPress that allows users to create, edit, and manage website content dynamically.)
+25. 📧 **Email System (e.g., Gmail) (Design a system for sending and receiving emails, managing inboxes, and applying filters.)
+26. 🛍 **Digital Wallet (e.g., PayPal) (Build a system to manage user accounts, handle payments, and support peer-to-peer money transfers.
+27. 🔧 **Bug Tracking System (e.g., Jira) (Design a system for tracking project issues, managing workflows, and assigning tasks to developers.)
+28. 🚴‍♂️ F**itness Tracking Application (e.g., Strava) (Build a system to track workouts, display user progress, and provide social sharing features.)
 
 ---
 
