@@ -51,6 +51,17 @@
 27. 🛍 **Digital Wallet (e.g., PayPal)** - Build a system to manage user accounts, handle payments, and support peer-to-peer money transfers.
 28. 🔧 **Bug Tracking System (e.g., Jira)** - Design a system for tracking project issues, managing workflows, and assigning tasks to developers.
 29. 🚴‍♂️ **Fitness Tracking Application (e.g., Strava)** - Build a system to track workouts, display user progress, and provide social sharing features.
+30. 🎧 **Design Music App (eg.spotify,yt music)** - In this System we need to discuss about how user authentication , music shuffle feature , recommendation feature works.
+31. 🐦 **Design Twitter ** -  Create a system where users can post, like, retweet, and follow others, focusing on feed generation and real-time updates.
+32. 🗓  **Design Google Calendar** -Design a system to schedule, view, and update events with support for recurring events and cross-device synchronization.
+33. 🔗 **Design TinyURL Service** -User will give us a long URL and return a short URL.
+34. 📱 **Design Facebook/Instagram** - Create a platform to manage user profiles, posts, and newsfeeds, handling celebrity posts, user interactions, and scalability.
+35. 💸 **Design Splitwise** - Design a system to minimize cash flow among a group of friends who owe money to each other, using algorithms to simplify debt settlement.
+36. 🎲 **Design Snake & Ladder** - Create a classic board game system modeling the board, players, and dice rolls, handling game logic for snakes, ladders, and player turns.
+37. 🌐 **Design Quora/Reddit/HackerNews**- Build a social network + message board service where users can post questions, comments, upvote, and manage threads.
+38. 📁 **Design Dropbox/Google Drive/Google Photos**- Create a global file storage and sharing service that allows users to upload, retrieve, and share files across multiple devices securely.
+39. 🔍 **Design Search Typeahead (Autocomplete)** - Build a search autocomplete system that suggests words as users type, leveraging efficient data structures like Trie for fast lookup.
+40. 🔐 **Design an API Rate Limiter (e.g., GitHub)** - Design a system that limits the number of API requests a user can make over a specified time period, implementing token bucket or leaky bucket algorithms.
 
     
 ---
