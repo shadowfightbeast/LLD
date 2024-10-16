@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-// Pattern are also known as virtual constructor
+// This Pattern are also known as virtual constructor
 // Subclasses are responsible to create the instances of the class
 class Vehicle {
 public:

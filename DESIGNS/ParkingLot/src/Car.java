@@ -13,12 +13,10 @@ public class Car {
     }
 
     public String getRegistrationNumber() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getRegistrationNumber'");
     }
 
     public void setStatus(CarStatus rented) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setStatus'");
     }
 }

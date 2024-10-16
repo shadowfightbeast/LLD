@@ -7,7 +7,6 @@ public class VehicleFactory {
         }
         if (vehicleType.equalsIgnoreCase("Car")) {
             return new Car();
-
         }
         // return null; //instead of returning null we return NULL Object
         return new NullVehicle();

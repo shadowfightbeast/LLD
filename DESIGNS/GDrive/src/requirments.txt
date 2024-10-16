@@ -1,0 +1,180 @@
+https://chatgpt.com/share/66faff7c-ce2c-800b-be16-7bba3d4593a2
+
+Global File Storage and Sharing Service (Java-based)
+Project Overview:
+Design and develop a global file storage and sharing service similar to Dropbox, Google Drive, or Google Photos. The service will allow users to securely upload, retrieve, and share files across multiple devices, with functionalities for account management, file sharing, and version control.
+
+Tech Stack:
+Backend: Java (Spring Boot)
+Frontend: React.js (optional if using a web interface)
+Database: PostgreSQL or MySQL for user and file metadata, AWS S3 or similar for file storage
+Security: OAuth2 for authentication, TLS for secure communication
+Storage: Amazon S3 (or local file system for development)
+Deployment: Docker for containerization, Kubernetes for orchestration
+Requirements:
+1. Functional Requirements:
+User Management:
+
+Users can create accounts, log in, and reset passwords.
+OAuth 2.0 authentication (Google, Facebook, etc.) should be supported.
+User profiles that store details like username, email, and storage quota.
+File Uploading and Retrieval:
+
+Users can upload files of any type (images, videos, documents, etc.).
+Users can view, download, or delete their uploaded files.
+File versioning: Users can upload new versions of the same file, and retrieve past versions.
+Metadata for each file (size, upload date, last modified, etc.).
+File Sharing:
+
+Users can share files with other registered users or through public links.
+Option to set expiration dates on shared links.
+Permissions: The owner can set file permissions (read-only or read-write).
+Storage Management:
+
+Track users’ file storage usage, with a limit based on the plan.
+Admin dashboard for managing storage quotas.
+Folder Organization:
+
+Users can organize files in folders.
+Basic file operations (rename, move, delete).
+Ability to search files by name, type, or tags.
+Multi-device Sync:
+
+Users can access their files from multiple devices.
+Real-time sync across devices when files are uploaded or modified.
+Notifications:
+
+Email or in-app notifications for shared files, version updates, or when storage is running low.
+File Backup and Recovery:
+
+Trash feature for deleted files, with auto-deletion after a set time.
+Recover files from trash within the time frame.
+2. Non-functional Requirements:
+Scalability:
+
+The system should handle a large number of concurrent users.
+It should scale horizontally by adding more storage servers or databases.
+Security:
+
+All file uploads and downloads must be encrypted (HTTPS/TLS).
+File encryption (server-side) for secure storage.
+Role-based access control (RBAC) to restrict unauthorized access.
+Audit logs for tracking file access and modifications.
+Performance:
+
+Files should be retrieved and downloaded with minimal latency.
+Efficient file caching for faster retrieval of frequently accessed files.
+Reliability:
+
+The system should be fault-tolerant with regular backups and data replication.
+Compliance:
+
+Comply with GDPR, CCPA, and other relevant data protection laws.
+Option for users to download a copy of their stored data.
+System Design:
+1. Architecture Components:
+Frontend (Optional if using web):
+
+React.js or Angular for a responsive UI.
+User dashboard to upload and view files, track storage, and manage shared files.
+Backend:
+
+Spring Boot for RESTful APIs.
+Authentication: OAuth2 or JWT tokens for session management.
+File Service: Handles file uploads, downloads, and file sharing logic.
+Storage Service: Integration with AWS S3 (or local file system) for file storage.
+Database: PostgreSQL or MySQL to store file metadata and user information.
+Storage:
+
+AWS S3 (or alternative) for file storage.
+PostgreSQL to store file metadata like file names, owners, timestamps, and permissions.
+Queue Service:
+
+RabbitMQ or Kafka to handle file-sharing notifications, asynchronous processing (e.g., thumbnail generation for photos).
+Cloud & Deployment:
+
+Docker for containerization of the services.
+Kubernetes to manage the deployment, scaling, and orchestration of containers.
+CI/CD pipeline for automated testing, deployment, and scaling.
+Database Schema:
+Users Table:
+
+id (Primary Key)
+username
+email
+password_hash
+storage_quota
+created_at
+Files Table:
+
+id (Primary Key)
+user_id (Foreign Key -> Users)
+file_name
+file_size
+file_version
+file_path (S3 URL or local path)
+upload_time
+last_modified
+permissions (Public, Private, Shared)
+Shares Table:
+
+id (Primary Key)
+file_id (Foreign Key -> Files)
+shared_with_user_id (Foreign Key -> Users)
+permission (Read, Write)
+share_link
+expiration_time
+File Versions Table:
+
+id (Primary Key)
+file_id (Foreign Key -> Files)
+version_number
+file_path
+created_at
+Key Java Classes:
+UserController.java
+
+Handles user account creation, login, password reset.
+Endpoints for user profile and quota management.
+FileController.java
+
+API for file upload, download, delete, and version management.
+File sharing API to generate links and set permissions.
+FileService.java
+
+Logic for handling file operations.
+File compression and encryption before upload to storage.
+Manage file metadata in the database.
+ShareService.java
+
+Handles file-sharing functionality.
+Generates shareable links with permissions and expiration times.
+StorageService.java
+
+Integration with Amazon S3 or local file system.
+Handles multipart file uploads and large file handling.
+AuthService.java
+
+OAuth2 or JWT-based user authentication.
+Manages login, signup, and authorization logic.
+API Endpoints:
+User APIs:
+
+POST /signup: Create a new user account.
+POST /login: User login.
+POST /reset-password: Reset user password.
+File APIs:
+
+POST /files/upload: Upload a new file.
+GET /files/{id}: Retrieve a file by ID.
+GET /files/{id}/versions: Retrieve all versions of a file.
+DELETE /files/{id}: Delete a file by ID.
+Share APIs:
+
+POST /files/{id}/share: Share a file with a user or generate a public link.
+GET /files/shared: List all shared files.
+Future Considerations:
+Mobile Support: Native apps for iOS and Android with sync capability.
+Collaboration Features: Allow multiple users to collaborate on documents in real time.
+Advanced Search: Support searching within the content of documents.
+Premium Plans: Offer paid plans for users with higher storage limits and additional features like advanced security.
