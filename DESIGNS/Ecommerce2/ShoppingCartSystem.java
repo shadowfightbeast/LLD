@@ -103,7 +103,7 @@ class OrderSystem {
     private final Lock lock = new ReentrantLock();
 
     public void addProduct(Product product) {
-        inventory.put(product.getId(), product);
+        inventory.put(product.getId(), product);.00
     }
 
     public int getInventoryCount(int productId) {
