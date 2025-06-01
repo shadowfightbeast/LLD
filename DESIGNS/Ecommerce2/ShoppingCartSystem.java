@@ -10,6 +10,7 @@ import java.util.concurrent.locks.*;
 //4. Place order and confirm it by calculating total amount, 
 //Bonus 1.How multiple people can order at same time (synchronous asynchronous logic),
 //  2. Revert back add to cart items to stock if order not placed within 5 min
+
 class Product {
     private final int id;
     private final String name;
@@ -103,7 +104,7 @@ class OrderSystem {
     private final Lock lock = new ReentrantLock();
 
     public void addProduct(Product product) {
-        inventory.put(product.getId(), product);.00
+        inventory.put(product.getId(), product);
     }
 
     public int getInventoryCount(int productId) {

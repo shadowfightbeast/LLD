@@ -1,4 +1,4 @@
-package models;
+package DESIGNS.Uber.src.models;
 
 public enum RideStatus {
     REQUESTED,

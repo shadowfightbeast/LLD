@@ -1,4 +1,4 @@
-package models;
+package DESIGNS.Uber.src.models;
 
 public class Passenger {
     private final int id;

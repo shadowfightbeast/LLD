@@ -1,9 +1,17 @@
-import models.Driver;
-import models.DriverStatus;
-import models.Location;
-import models.Passenger;
-import models.Ride;
-import services.RideService;
+package DESIGNS.Uber.src;
+
+import DESIGNS.Uber.src.models.Driver;
+import DESIGNS.Uber.src.models.DriverStatus;
+import DESIGNS.Uber.src.models.Location;
+import DESIGNS.Uber.src.models.Passenger;
+import DESIGNS.Uber.src.models.Ride;
+import DESIGNS.Uber.src.services.RideService;
+
+// import DESIGNS.Uber.src.models.Driver;
+// import DESIGNS.Uber.src.models.DriverStatus;
+// import DESIGNS.Uber.src.models.Location;
+// import DESIGNS.Uber.src.models.Passenger;
+// import DESIGNS.Uber.src.services.RideService;
 
 public class UberMain {
     public static void main(String[] args) {

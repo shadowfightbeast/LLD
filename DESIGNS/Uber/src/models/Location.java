@@ -1,4 +1,4 @@
-package models;
+package DESIGNS.Uber.src.models;
 
 public class Location {
     private final double latitude;

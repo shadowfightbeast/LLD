@@ -1,15 +1,15 @@
-package services;
+package DESIGNS.Uber.src.services;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import models.Driver;
-import models.DriverStatus;
-import models.Location;
-import models.Passenger;
-import models.Ride;
-import models.RideStatus;
+// import DESIGNS.Uber.src.models.Driver;
+// import DESIGNS.Uber.src.models.DriverStatus;
+// import DESIGNS.Uber.src.models.Location;
+// import DESIGNS.Uber.src.models.Passenger;
+// import DESIGNS.Uber.src.models.Ride;
+// import DESIGNS.Uber.src.models.RideStatus;
 
 public class RideService {
     private static RideService instance;
