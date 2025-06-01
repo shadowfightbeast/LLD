@@ -62,7 +62,7 @@ The types of Behavioral patterns are:
 ### Social Media & Communication Systems
 
 1. 🐦 **Design Twitter** - Create a system where users can post, like, retweet, and follow others, focusing on feed generation and real-time updates.
-2. 📱 **Design Facebook/Instagram** - Create a platform to manage user profiles, posts, and newsfeeds, handling celebrity posts, user interactions, and scalability.
+2. 📱 **Design Facebook/Instagram** - Create a platform to manage user profiles, posts, and news feeds, handling celebrity posts, user interactions, and scalability.
 3. 💼 **Job Portal System (e.g., LinkedIn)** - Build a system where users can post and apply for jobs, create profiles, and receive job recommendations.
 4. 🌐 **Design Quora/Reddit/HackerNews** - Build a social network + message board service where users can post questions, comments, upvote, and manage threads.
 5. 📱 **Messaging/Chat Application (e.g., WhatsApp)** - Build a messaging system to handle real-time communication, user profiles, and chat history.
