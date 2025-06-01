@@ -1,3 +1,5 @@
+package MultiThreading;
+
 public class NewThreads extends Thread {
 
     public void run() {

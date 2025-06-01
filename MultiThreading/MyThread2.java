@@ -1,3 +1,5 @@
+package MultiThreading;
+
 public class MyThread2 extends Thread {
     @Override
     public void run() {
@@ -18,7 +20,8 @@ public class MyThread2 extends Thread {
 
     public static void main(String[] args) {
         MyThread2 t1 = new MyThread2();
-        // t1.setDaemon(true); //daemon means it is bg running process when main code finish it stopped by jvm  
+        // t1.setDaemon(true); //daemon means it is bg running process when main code
+        // finish it stopped by jvm
         t1.start();
         // t1.interrupt(); //interrupt thread
         System.out.println("Main Done");

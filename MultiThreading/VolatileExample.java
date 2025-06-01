@@ -1,3 +1,5 @@
+package MultiThreading;
+
 public class VolatileExample extends Thread {
     private static volatile boolean flag = false;
 

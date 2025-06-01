@@ -1,3 +1,5 @@
+package MultiThreading;
+
 public class Threading extends Thread {
     @Override
     public void run() {

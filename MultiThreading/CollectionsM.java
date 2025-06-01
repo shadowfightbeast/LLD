@@ -1,3 +1,5 @@
+package MultiThreading;
+
 import java.util.*;
 
 public class CollectionsM {

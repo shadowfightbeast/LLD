@@ -1,3 +1,5 @@
+package MultiThreading;
+
 class Task implements Runnable {
     private String name;
 

@@ -1,3 +1,5 @@
+package MultiThreading;
+
 class SharedResources {
     private int data;
     private boolean hasData;

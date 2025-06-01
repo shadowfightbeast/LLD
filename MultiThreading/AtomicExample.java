@@ -1,3 +1,5 @@
+package MultiThreading;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class AtomicExample extends Thread {
@@ -12,7 +14,7 @@ public class AtomicExample extends Thread {
     public static void main(String[] args) throws InterruptedException {
         AtomicExample t1 = new AtomicExample();
         AtomicExample t2 = new AtomicExample();
-        
+
         t1.start();
         t2.start();
         t1.join();
