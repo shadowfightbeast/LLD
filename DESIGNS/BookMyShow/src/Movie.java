@@ -1,3 +1,4 @@
+package DESIGNS.BookMyShow.src;
 
 public class Movie {
     int movieId;
