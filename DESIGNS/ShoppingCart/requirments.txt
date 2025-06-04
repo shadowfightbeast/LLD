@@ -1,0 +1,53 @@
+
+
+🛒 LLD Question: Design a Shopping Cart System
+🎯 Problem Statement
+Design a simple e-commerce shopping cart system with the following requirements:
+
+✅ Requirements:
+1. Product Catalog
+There are multiple products.
+
+Each product has: id, name, price, category.
+
+2. Shopping Cart
+A user can add or remove products from the cart.
+
+A cart contains multiple items.
+
+Each item has a quantity and refers to a product.
+
+3. Price Calculation
+Calculate total price of the cart.
+
+Apply discounts/promotions:
+
+If total cart value > $500, apply 10% discount.
+
+If a product belongs to category "Electronics", apply 5% discount on that product.
+
+4. Support multiple users, each with a separate cart.
+⚙️ Extended/Optional Features (Bonus)
+Allow checkout which finalizes the cart and creates an order.
+
+Maintain a record of past orders per user.
+
+Support promo codes or coupon discounts.
+
+Track inventory for each product.
+
+Would you like to:
+
+Try solving it yourself and I review it?
+
+Or should I go ahead and implement the design + code for you like we did with the parking lot system?
+
+
+
+Would you like to add:
+
+Checkout + Order creation?
+
+Inventory management?
+
+Promo codes / coupons?
